@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-black border border-white/20 rounded-2xl shadow-lg shadow-black z-50">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] bg-gradient-to-r from-cyan-500 to-cyan-700 border border-white/20 rounded-2xl shadow-lg shadow-black z-50">
       <div className="flex justify-between items-center p-4">
         {/* Logo/Menu - Mobile Only */}
         <div className="md:hidden">
@@ -19,7 +19,7 @@ export default function Navbar() {
                 exit={{ opacity: 0, y: 10 }}
                 className="text-xl font-bold text-white tracking-wider"
               >
-                Futuristic
+                True Wifi Attendance
               </motion.h1>
             ) : (
               <motion.ul
@@ -30,7 +30,7 @@ export default function Navbar() {
                 className="flex gap-6 text-white"
               >
                 {["Home", "About", "Services", "Contact"].map((item) => (
-                  <li key={item} className="cursor-pointer hover:text-cyan-300 transition duration-300">
+                  <li key={item} className="cursor-pointer hover:text-yellow-300 transition duration-300">
                     {item}
                   </li>
                 ))}
@@ -43,11 +43,11 @@ export default function Navbar() {
         <button onClick={() => setIsOpen(!isOpen)} className="text-white md:hidden">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
-        <AnimatePresence mode="wait" ><motion.h1 className="hidden md:flex font-bold text-2xl text-white">Futuristic</motion.h1></AnimatePresence>
+        <AnimatePresence mode="wait" ><motion.h1 className="hidden md:flex font-bold text-2xl text-white">True Wifi Attendance</motion.h1></AnimatePresence>
         {/* Desktop Menu (Always Visible) */}
         <ul className="hidden md:flex gap-6 text-white">
           {["Home", "About", "Services", "Contact"].map((item) => (
-            <li key={item} className="cursor-pointer hover:text-cyan-300 transition duration-300">
+            <li key={item} className="cursor-pointer hover:text-yellow-300 transition duration-300">
               {item}
             </li>
           ))}

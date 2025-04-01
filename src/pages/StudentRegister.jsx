@@ -81,7 +81,7 @@ function StudentLogin() {
                     <button type="submit" className="w-full mt-6 rounded-2xl bg-cyan-500 text-white p-2 hover:bg-cyan-800 hover:shadow-2xl hover:scale-105 transition-all duration-600">Register</button>
 
                     <p className="mt-2 text-sm text-center">
-                        have an account? <a href="/student/register" className="text-blue-500 transition-all duration-100 hover:scale-110 hover:text-blue-800 hover:underline">Login</a>
+                        have an account? <a href="/student/login" className="text-blue-500 transition-all duration-100 hover:scale-110 hover:text-blue-800 hover:underline">Login</a>
                     </p>
                 </form>
 

@@ -27,7 +27,7 @@ function AdminLogin() {
     <>
       <div className="flex flex-col sm-m-10 bg-gradient-to-r from-gray-700 to-gray-400 items-center justify-center h-screen sm:max-xl">
         <form onSubmit={handleLogin} className="sm:max-w-full  sm:max-h-full flex flex-col justify-around border-4 rounded-2xl p-10 shadow-2xl shadow-black bg-gradient-to-r from-cyan-400  to-cyan-100 min-w-100 min-h-120 hover:scale-115 transition-all duration-600 hover:shadow-cyan-400 " >
-            <h1 className="text-3xl text-center font-bold mb-5">Admin Login</h1>
+            <h1 className="text-3xl text-center font-bold mb-5">Admin Register</h1>
             <label>ID</label>
             <input
             type="text"

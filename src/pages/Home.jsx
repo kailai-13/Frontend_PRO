@@ -22,8 +22,9 @@ function Home() {
     };
 
     return (
+        <>
         <div className="flex flex-col sm:flex-row items-center justify-between h-screen bg-gradient-to-r from-gray-700 to-gray-400">
-            <nav className="fixed"><Navbar/></nav>
+            <nav className="fixed z-50"><Navbar/></nav>
             <div className="flex flex-col items-center sm:items-start sm:mt-20 sm:ml-20  sm:w-1/2 gap-6">
 
                 {/* Grid Layout */}
@@ -47,14 +48,31 @@ function Home() {
             </div>
 
             {/* Wi-Fi Icon (right side on large screens) */}
-            <div className="hidden sm:flex flex-col items-center justify-center sm:w-1/2 text-white space-y-4 sm:mr-20">
+            <div className="hidden sm:flex flex-col items-center justify-center sm:w-1/2 text-white space-y-4 sm:mr-20 ">
                 <div className="relative flex justify-center items-center p-5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:scale-110 transform transition-all duration-300">
                     <FaWifi className="text-9xl" />
                     <span className="absolute top-0 left-0 right-0 bottom-0 animate-ping opacity-75 rounded-full bg-cyan-300"></span>
                 </div>
                 <p className="text-lg">Interact with Wi-Fi symbol</p>
             </div>
+
+      
         </div>
+        <div className="bg-gradient-to-r from-gray-700 to-gray-400 flex flex-col p-10 text-center gap-10">
+            <div >
+                <h1 className="text-5xl text-white font-bold ">About Us</h1>
+                <p className="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+            <div>
+                <h1 className="text-5xl text-white font-bold">Services</h1>
+                <p className="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+            <div>
+                <h1 className="text-5xl text-white font-bold">Contact</h1>
+                <p className="text-white text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p>
+            </div>
+        </div>
+        </>
     );
 }
 

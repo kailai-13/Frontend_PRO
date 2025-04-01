@@ -1,44 +1,58 @@
+import { useNavigate } from "react-router-dom";
+import { FaWifi } from "react-icons/fa"; // For the Wi-Fi icon
 import Navbar from "../components/Navbar";
-import { useNavigate } from "react-router-dom"; // We will need navigate for button redirects
 
 function Home() {
-    const navigate = useNavigate(); // Hook to navigate between pages
+    const navigate = useNavigate();
 
-    // Navigate to Admin login
     const goToAdminLogin = () => {
         navigate("/admin/login");
     };
 
-    // Navigate to Student login
+    const goToAdminRegister = () => {
+        navigate("/admin/register");
+    };
+
     const goToStudentLogin = () => {
         navigate("/student/login");
     };
 
+    const goToStudentRegister = () => {
+        navigate("/student/register");
+    };
+
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-gray-700 to-gray-400">
-            <nav className="fixed w-full">
-                <Navbar />
-            </nav>
+        <div className="flex flex-col sm:flex-row items-center justify-between h-screen bg-gradient-to-r from-gray-700 to-gray-400">
+            <nav className="fixed"><Navbar/></nav>
+            <div className="flex flex-col items-center sm:items-start sm:mt-20 sm:ml-20  sm:w-1/2 gap-6">
 
-            <div className="flex flex-col items-center justify-center mt-20">
-                <h1 className="text-3xl font-bold text-blue-500 mb-5">Welcome to the App</h1>
-                <p className="text-lg text-center mt-2 mb-10">Choose your role to log in</p>
+                {/* Grid Layout */}
+                <div className="grid grid-cols-1 sm:mt-auto mt-40 sm:grid-cols-2 gap-6 sm:w-full">
+                    {/* Admin Section */}
+                    <div className="flex flex-col items-center justify-center bg-cyan-500 text-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-cyan-700 cursor-pointer" onClick={goToAdminLogin}>
+                        <h2 className="font-bold text-xl mb-3">Admin Login</h2>
+                    </div>
+                    <div className="flex flex-col items-center justify-center bg-cyan-500 text-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-cyan-700 cursor-pointer" onClick={goToAdminRegister}>
+                        <h2 className="font-bold text-xl mb-3">Admin Register</h2>
+                    </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                    <button
-                        onClick={goToAdminLogin}
-                        className="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg mb-4 sm:mb-0 transition-all duration-300 transform hover:bg-blue-700 hover:scale-105"
-                    >
-                        Admin Login
-                    </button>
-
-                    <button
-                        onClick={goToStudentLogin}
-                        className="px-8 py-3 bg-green-500 text-white rounded-lg text-lg mb-4 sm:mb-0 transition-all duration-300 transform hover:bg-green-700 hover:scale-105"
-                    >
-                        Student Login
-                    </button>
+                    {/* Student Section */}
+                    <div className="flex flex-col items-center justify-center bg-yellow-300 text-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-yellow-400 cursor-pointer" onClick={goToStudentLogin}>
+                        <h2 className="font-bold text-xl mb-3">Student Login</h2>
+                    </div>
+                    <div className="flex flex-col items-center justify-center bg-yellow-300 text-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:scale-105 hover:bg-yellow-400 cursor-pointer" onClick={goToStudentRegister}>
+                        <h2 className="font-bold text-xl mb-3">Student Register</h2>
+                    </div>
                 </div>
+            </div>
+
+            {/* Wi-Fi Icon (right side on large screens) */}
+            <div className="hidden sm:flex flex-col items-center justify-center sm:w-1/2 text-white space-y-4 sm:mr-20">
+                <div className="relative flex justify-center items-center p-5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 hover:scale-110 transform transition-all duration-300">
+                    <FaWifi className="text-4xl" />
+                    <span className="absolute top-0 left-0 right-0 bottom-0 animate-ping opacity-75 rounded-full bg-cyan-300"></span>
+                </div>
+                <p className="text-lg">Interact with Wi-Fi symbol</p>
             </div>
         </div>
     );

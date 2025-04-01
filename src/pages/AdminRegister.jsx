@@ -64,9 +64,9 @@ function AdminLogin() {
             className="border-1 rounded-xl text-center min-h-10">
 
             </input>
-            <button type="submit" className="w-full mt-10 rounded-2xl border-1 bg-blue-500 text-white p-2 hover:bg-blue-800 hover:shadow-2xl hover:scale-105 transition-all duration-600">Login</button>
+            <button type="submit" className="w-full mt-10 rounded-2xl border-1 bg-blue-500 text-white p-2 hover:bg-blue-800 hover:shadow-2xl hover:scale-105 transition-all duration-600">Register</button>
             <p className="mt-2 text-sm text-center">
-          Don't have an account? <a href="/admin/register" className="text-blue-500 hover:text-blue-800 hover:underline">Register</a>
+         have an account? <a href="/admin/login" className="text-blue-500 hover:text-blue-800 hover:underline">Login</a>
         </p>
         </form>
       </div>

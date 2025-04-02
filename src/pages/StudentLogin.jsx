@@ -7,8 +7,7 @@ function StudentLogin() {
     const [user, setUser] = useState("");
     const [password, setPassword] = useState("");
     const [showCamera, setShowCamera] = useState(false); // State for showing/hiding camera
-    const [imageSrc, setImageSrc] = useState(null); // State to store captured image
-    const navigate = useNavigate();
+    const [imageSrc, setImageSrc] = useState(null); 
     const [isImage, setIsImage]= useState(false);
 
     // Handle login
